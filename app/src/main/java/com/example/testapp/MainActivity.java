@@ -2,6 +2,7 @@ package com.example.testapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.testapp.pageradapter.MyFragmentStatePagerAdapter;
+import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
 
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private android.widget.TextView text1;
 
     ViewPager viewPager;
+    WormDotsIndicator wormDotsIndicator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,18 +35,22 @@ public class MainActivity extends AppCompatActivity {
         edit = sharedPreferences.edit();
         Boolean isFirst = sharedPreferences.getBoolean("firstTime", true);
         // text1 = findViewById(R.id.textView3);
-//        if(!isFirst){
-//            text1.setVisibility(View.GONE);
-//        }
+        if(!isFirst){
+            wormDotsIndicator = findViewById(R.id.indicator);
+            wormDotsIndicator.setVisibility(View.GONE);
+        }
         if(isFirst) {
+            wormDotsIndicator = findViewById(R.id.indicator);
             viewPager = findViewById(R.id.pager);
             viewPager.setAdapter(new MyFragmentStatePagerAdapter(getSupportFragmentManager()));
+            wormDotsIndicator.setViewPager(viewPager);
         }
     }
 
     public void End_Tutorial () {
         edit.putBoolean("firstTime", false).apply();
         viewPager.setVisibility(View.GONE);
+        wormDotsIndicator.setVisibility(View.GONE);
         return ;
     }
 }
