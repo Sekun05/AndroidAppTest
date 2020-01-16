@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 <!--    <TextView-->
-<!--        android:id="@+id/textView"-->
+<!--        android:id="@+id/textView3"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        android:text="This is First Time"-->
@@ -28,18 +28,20 @@
 <!--        app:layout_constraintVertical_bias="0.613" />-->
 
     <androidx.viewpager.widget.ViewPager
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-<!--        <androidx.viewpager.widget.PagerTitleStrip-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="top"-->
-<!--            android:background="#CCCCCC"-->
-<!--            android:textColor="#000000"-->
-<!--            android:paddingTop="10dp"-->
-<!--            android:paddingBottom="10dp"/>-->
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="10dp">
+        <!--        <androidx.viewpager.widget.PagerTitleStrip-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="top"-->
+        <!--            android:background="#CCCCCC"-->
+        <!--            android:textColor="#000000"-->
+        <!--            android:paddingTop="10dp"-->
+        <!--            android:paddingBottom="10dp"/>-->
     </androidx.viewpager.widget.ViewPager>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

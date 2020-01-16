@@ -27,20 +27,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        text1 = findViewById(R.id.textView);
 
         // 初回起動検知
         sharedPreferences = getSharedPreferences(preName, MODE_PRIVATE);
         edit = sharedPreferences.edit();
         Boolean isFirst = sharedPreferences.getBoolean("firstTime", true);
-        // text1 = findViewById(R.id.textView);
+        // text1 = findViewById(R.id.textView3);
 //        if(!isFirst){
 //            text1.setVisibility(View.GONE);
 //        }
         if(isFirst) {
             viewPager = findViewById(R.id.pager);
             viewPager.setAdapter(new MyFragmentStatePagerAdapter(getSupportFragmentManager()));
-            edit.putBoolean("firstTime", false).apply();
         }
+    }
+
+    public void End_Tutorial () {
+        edit.putBoolean("firstTime", false).apply();
+        viewPager.setVisibility(View.GONE);
+        return ;
     }
 }
