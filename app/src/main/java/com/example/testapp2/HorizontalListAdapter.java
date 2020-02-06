@@ -7,8 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.*;
 
 public class HorizontalListAdapter extends RecyclerView.Adapter {
 
@@ -40,9 +39,6 @@ public class HorizontalListAdapter extends RecyclerView.Adapter {
         TextView mTextView;
 
         ContentViewHolder(View v) {
-//            super(itemView);
-//            this.view = itemView;
-
             super(v);
             mTextView = (TextView) v.findViewById(R.id.list_item_text);
         }

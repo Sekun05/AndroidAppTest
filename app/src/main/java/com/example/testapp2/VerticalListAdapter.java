@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.DividerItemDecoration;
 
 public class VerticalListAdapter extends RecyclerView.Adapter {
     private Context context;
@@ -49,6 +50,8 @@ public class VerticalListAdapter extends RecyclerView.Adapter {
             // Setting recycler view
             RecyclerView recyclerView = view.findViewById(R.id.horizontal_recycler_view);
             recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
+            RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(context, DividerItemDecoration.HORIZONTAL);
+            recyclerView.addItemDecoration(itemDecoration);
 
             int i = 0;
             while (i < 20) {
@@ -60,5 +63,6 @@ public class VerticalListAdapter extends RecyclerView.Adapter {
             HorizontalListAdapter adapter = new HorizontalListAdapter(context, nextData);
             recyclerView.swapAdapter(adapter, false);
         }
+
     }
 }

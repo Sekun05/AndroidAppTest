@@ -12,7 +12,7 @@ public class ListActivity extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
-    // private String[] dataset = new String[20];
+//    private String[] dataset = new String[20];
     private String[][] dataset = new String[20][20];
 
     @Override
@@ -20,7 +20,7 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_screen_test);
 
-//        ////// 横スクロールリストのテスト //////
+        ////// 横スクロールのみリスト //////
 //        recyclerView = findViewById(R.id.my_recycler_view);
 //
 //        // use this setting to improve performance if you know that changes
@@ -30,17 +30,19 @@ public class ListActivity extends AppCompatActivity {
 //        // use a linear layout manager
 //        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
 //        recyclerView.setLayoutManager(layoutManager);
+//        RecyclerView.ItemDecoration decoration = new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL);
+//        recyclerView.addItemDecoration(decoration);
 //
 //        int i = 0;
 //        while (i < 20) {
-//            dataset[i] = String.format(Locale.ENGLISH, "Data_0%d", i);
+//            dataset[i] = String.format(Locale.ENGLISH, "Data_%d", i);
 //            i++;
 //        }
 //
 //        // specify an adapter (see also next example)
 //        mAdapter = new MyListAdapter(dataset);
 //        recyclerView.setAdapter(mAdapter);
-//        ////////////////////////////////////
+        ////////////////////////////////////
 
         // 縦横両方ありのリストを呼び出し
         initRecyclerView();
