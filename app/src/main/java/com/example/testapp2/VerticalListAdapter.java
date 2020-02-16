@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.DividerItemDecoration;
 
+
 public class VerticalListAdapter extends RecyclerView.Adapter {
     private Context context;
     private String[][] mDataset = new String[20][20];
